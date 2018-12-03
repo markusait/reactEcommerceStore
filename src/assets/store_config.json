@@ -1,5 +1,5 @@
 {
-  "store_name": "My Awesome Store",
+  "store_name": "EOS EBT store",
   "store_slug": "react-stripe-store",
   "api_key": "{STRIPE_PUBLIC_KEY}",
   "colors": {
@@ -14,11 +14,31 @@
   },
   "products": [
     {
-      "name": "Super Cool Product",
-      "url": "url-for-product",
+      "name": "Bananas",
+      "url": "bananas",
+      "stripe_id": "{STRIPE_PRODUCT_ID}",
+      "description": "Freshly produced",
+      "photos": ["photo1.jpg","photo2.jpg"],
+      "details": [
+        "These are details that get rendered as bullet points",
+        "Useful for short + sweet info"
+      ],
+      "variants": [
+        {
+          "name": "metadata",
+          "options":[
+            {"label": "option 1"},
+            {"label": "option 2"}
+          ]
+        }
+      ]
+    },
+        {
+      "name": "Milk",
+      "url": "milk",
       "stripe_id": "{STRIPE_PRODUCT_ID}",
       "description": "What a great product!",
-      "photos": ["photo1.jpg","photo2.jpg"],
+      "photos": ["photo1.jpg"],
       "details": [
         "These are details that get rendered as bullet points",
         "Useful for short + sweet info"

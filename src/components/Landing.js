@@ -18,7 +18,7 @@ const Hero = styled.div`
 `;
 
 class Landing extends Component {
-  
+
   render() {
     const { config } = this.props;
     return (
@@ -26,7 +26,7 @@ class Landing extends Component {
         <Paper style={{ padding: "40px" }}>
           <Hero>
             <div style={{ display: "inline-block", maxWidth: "80%"}}>
-              <p>intro your site here!</p>
+              <p>Welcome to EOS EBT STORE</p>
             </div>
           </Hero>
           <Divider style={{ margin: "40px 0" }}/>

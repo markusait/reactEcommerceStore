@@ -8,6 +8,19 @@ body {
   box-sizing: border-box;
 }
 
+/* .react-stripe-store{
+  background-image:url(https://shop.rachelbinx.com/static/media/triangle.d27473b9.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+} */
+
+html{
+  background-image:url(https://shop.rachelbinx.com/static/media/triangle.d27473b9.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
 body, html {
   font-size: 18px;
   font-family: 'Raleway', sans-serif;

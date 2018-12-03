@@ -56,7 +56,7 @@ class App extends Component {
           <ScrollToTop>
             <MuiThemeProvider theme={theme}>
               <div className={config.store_slug}>
-                <div className="bg" />
+                <div className="mybg" />
                 <Banner quantity={this.state.quantity} config={config} />
                 <Route exact path="/"
                   render={(props) => <Landing config={config} />}
@@ -66,9 +66,9 @@ class App extends Component {
                 />
                 { config.products.map((product,i) =>
                     <Route exact key={`route${i}`}
-                      path={`/product/${product.url}`} 
-                      render={(props) => 
-                        <Product product={product} config={config} 
+                      path={`/product/${product.url}`}
+                      render={(props) =>
+                        <Product product={product} config={config}
                           updateNumber={this.updateNumber}
                         />
                       }
