@@ -18,6 +18,28 @@ const Hero = styled.div`
 `;
 
 class Landing extends Component {
+    constructor(props) {
+    super(props);
+    this.state = {
+      owner: 'Hans'
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("lynxMobileLoaded", () => {
+//    alert("lynx has loaded!!!")
+    this.updateOwner()
+  });
+}
+  async updateOwner(){
+      try {
+        let result = await window.lynxMobile.requestSetAccount("sessiontry1222");
+        let owner = JSON.stringify(result['account']['total_resources']['owner'])
+        this.setState({ owner: owner });
+      } catch (err) {
+        console.log(err);
+      }
+    }
 
   render() {
     const { config } = this.props;
@@ -26,7 +48,8 @@ class Landing extends Component {
         <Paper style={{ padding: "40px" }}>
           <Hero>
             <div style={{ display: "inline-block", maxWidth: "80%"}}>
-              <p>Welcome to EOS EBT STORE</p>
+              <p>Welcome to the EOS EBT STORE</p>
+              <p>You are logged in {this.state.owner}</p>
             </div>
           </Hero>
           <Divider style={{ margin: "40px 0" }}/>
