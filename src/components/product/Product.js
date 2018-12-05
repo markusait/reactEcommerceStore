@@ -31,6 +31,7 @@ class Product extends Component {
     super(props)
     this.state = {
       quantity: 1,
+      price: 125,
       variants: props.product.variants || []
     };
   }

@@ -14,41 +14,20 @@
   },
   "products": [
     {
-      "name": "Bananas",
-      "url": "bananas",
-      "stripe_id": "{STRIPE_PRODUCT_ID}",
-      "description": "Freshly produced",
-      "photos": ["photo1.jpg","photo2.jpg"],
-      "details": [
-        "These are details that get rendered as bullet points",
-        "Useful for short + sweet info"
-      ],
-      "variants": [
-        {
-          "name": "metadata",
-          "options":[
-            {"label": "option 1"},
-            {"label": "option 2"}
-          ]
-        }
-      ]
-    },
-        {
-      "name": "Milk",
+      "name": "Monthly Subscription of fresh produce",
       "url": "milk",
       "stripe_id": "{STRIPE_PRODUCT_ID}",
-      "description": "What a great product!",
+      "description": "Freshly produced",
       "photos": ["photo1.jpg"],
       "details": [
-        "These are details that get rendered as bullet points",
-        "Useful for short + sweet info"
+        "Shop online with your EBT card and Food Stamps",
+        "Shop online at Stores like Walmart, Costco, Target"
       ],
       "variants": [
         {
-          "name": "metadata",
+          "name": "Subscription",
           "options":[
-            {"label": "option 1"},
-            {"label": "option 2"}
+            {"label": "126"}
           ]
         }
       ]

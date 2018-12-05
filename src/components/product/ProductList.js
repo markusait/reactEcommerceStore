@@ -84,15 +84,16 @@ class ProductList extends Component {
     return (
       <Wrapper>
         { products.map((product,i) => {
-          return <Link key={i} to={`/product/${product.url}`}>
+          return  <div className="gridWrap"> <Link key={i} to={`/product/${product.url}`}>
             <ImgWrapper borderColor={this.props.theme.palette.secondary.main}>
               <LargeIMG img={`../photos/${product.url}/${product.photos[0]}`}/>
             </ImgWrapper>
             <Title>
               {product.name}
-              <Price>${product.price}</Price>
+              <Price>$125</Price>
             </Title>
           </Link>
+          </div>
         })}
       </Wrapper>
     );

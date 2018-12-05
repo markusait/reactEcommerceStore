@@ -1,4 +1,4 @@
-const result = require('dotenv').config({path: 'config.env'});
+//const result = require('dotenv').config({path: 'config.env'});
 const express = require('express');
 const session = require('express-session');
 const helmet = require('helmet');
@@ -6,10 +6,16 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const path = require('path');
 const stripe = require("stripe")(process.env.STRIPE_KEY);
-const app = module.exports = express();
+const app = module.exports =  express();
+const proxy = require("http-proxy-middleware");
+
+//module.exports = app => {
+//  app.use(proxy("/api/*", { target: "http://localhost:5000/" }));
+//};
+
 
 app.use(helmet());
-app.use(cookieParser());
+//app.use(cookieParser());
 
 var sess = {
   secret: process.env.SESSION_SECRET,
@@ -20,15 +26,15 @@ var sess = {
   resave: false,
   saveUninitialized: true,
 }
- 
+console.log(app.get('env')) 
 if (app.get('env') === 'production') {
   app.set('trust proxy', 1);
   sess.cookie.secure = true;
 }
  
-app.use(session(sess))
+//app.use(session(sess))
 
-if (result.error) throw result.error;
+//if (result.error) throw result.error;
 require( __dirname + '/orders.js');
 require( __dirname + '/admin.js');
 

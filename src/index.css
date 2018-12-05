@@ -7,6 +7,9 @@ body {
 * {
   box-sizing: border-box;
 }
+.gridWrap{
+  grid-column: 2;
+}
 
 /* .react-stripe-store{
   background-image:url(https://shop.rachelbinx.com/static/media/triangle.d27473b9.svg);
